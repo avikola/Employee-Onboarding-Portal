@@ -5,8 +5,7 @@ Project Overview:
 - New hires can view their onboarding progress, complete assigned tasks, and upload necessary documents.
 - The purpose is to enhance the user experience for HR teams and new employees by providing a structured and seamless onboarding experience.
 
-Core Requirements (Must-Have Features):
-
+# Core Requirements (Must-Have Features):
 User Registration & Login:
 - Implement basic user registration and login functionality.
 - Support Two-Factor Authentication (2FA) using a verification code sent to the user's email.
@@ -32,20 +31,20 @@ Employee Dashboard
 Responsive Design
 - Ensure the UI is responsive and adjusts well to different screen sizes.
 
-Optional Bonus Features (Only if you have extra time to dedicate to the project. NOT mandatory):
+# Optional Bonus Features (Only if you have extra time to dedicate to the project. NOT mandatory):
 - Email Notification System: Send automated emails for new task assignments or task deadlines.
 - Document Management: Upload and store onboarding-related documents.
 - Real-Time Updates: Use WebSockets for real-time task status updates.
 - Employee Profile Page: Detailed profile page for each employee.
 - Dark Mode Toggle: Implement a dark mode toggle for different themes.
 
-Deliverables:
+# Deliverables:
 - GitHub Repository Link: Share the complete source code in a public GitHub repository.
 - README File: Include setup instructions, technologies used, features implemented, and known issues (if any).
 - Documentation: API endpoints, database schema, and user flow diagrams (optional).
 - Deployed Version (Optional): Deploy on a cloud service like Heroku, Netlify, or Vercel and share the live link.
 
-Submission Guidelines:
+# Submission Guidelines:
 - Create a GitHub repository with a clear folder structure for `client` and `server`.
 - Submit the GitHub repository link via the application form or email it to the provided contact.
 - Ensure the README file includes setup and run instructions.
@@ -53,7 +52,7 @@ Submission Guidelines:
 - Submission Deadline: Complete and submit the project within 5 days of receiving the brief. If you encounter any delays, please inform us before your deadline via hr@jacksonandfrank.com.
 - Expected Time Commitment: 5-7 hours for core features. You can spend more time on optional features but this is NOT required.
 
-Evaluation Criteria:
+# Evaluation Criteria:
 - Functionality: Does the project meet all the core requirements?
 - Code Quality: Is the code well-organized, readable, and follows best practices?
 - UI/UX: Is the UI clean, responsive, and user-friendly?
