@@ -1,4 +1,4 @@
-Full-Stack Developer @ Jackson & Frank Assessment: Employee Onboarding Portal
+# Full-Stack Developer @ Jackson & Frank Assessment: Employee Onboarding Portal
 Project Overview:
 - The Employee Onboarding Portal is designed to streamline and simplify the employee onboarding process for HR managers and new hires.
 - The portal allows HR managers to add new employees, assign onboarding tasks, and track completion statuses.
