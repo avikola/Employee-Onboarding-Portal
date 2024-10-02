@@ -1,0 +1,66 @@
+.hr-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.employee-section {
+	display: flex;
+	column-gap: 12px;
+}
+
+.employee-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 12px;
+	height: 500px;
+	padding: 12px 12px;
+	border-radius: 5px;
+	background-color: #70b8ff;
+	width: 250px;
+	overflow-y: auto;
+}
+
+.employee {
+	background-color: #c2e6ff;
+
+	padding: 8px;
+	width: auto;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		font-weight: 600;
+	}
+}
+
+.employee-edit {
+	background-color: #c2e6ff;
+	border-radius: 5px;
+	flex: 1;
+	padding: 48px;
+
+	.employee-form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		row-gap: 24px;
+
+		label {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.buttons {
+			button {
+				margin-right: 12px;
+			}
+		}
+	}
+}

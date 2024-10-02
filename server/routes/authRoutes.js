@@ -2,12 +2,8 @@ const express = require("express");
 const { check } = require("express-validator");
 
 const { register, login, verify2FA } = require("../controllers/authController");
-const roles = require("../middleware/rolesMiddleware");
 
 const router = express.Router();
-
-// APIs Restricted to HR Manager
-router.use(roles(["HR Manager"]));
 
 // Register user
 // POST /api/auth/register
@@ -27,7 +23,7 @@ router.post(
 router.post(
 	"/login",
 	[
-		check("email", "Please include a valid email").isEmail(),
+		check("username", "Please include a valid username").exists(),
 		check("password", "Password is required").exists(),
 	],
 	login

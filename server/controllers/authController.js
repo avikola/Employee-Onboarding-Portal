@@ -3,6 +3,8 @@ const jwt = require("jsonwebtoken");
 
 const { validationResult } = require("express-validator");
 
+let users = require("../../data/users.json");
+
 const User = require("../models/userModel");
 
 exports.register = async (req, res) => {
@@ -45,34 +47,42 @@ exports.register = async (req, res) => {
 };
 
 exports.login = async (req, res) => {
-	// Validate input
+	// Validation
 	const errors = validationResult(req);
 	if (!errors.isEmpty()) {
 		return res.status(400).json({ errors: errors.array() });
 	}
 
-	const { email, password } = req.body;
+	const { username, password } = req.body;
 
 	try {
-		// Check user
-		let user = await User.findOne({ email });
+		// Check if user exists
+		const user = users.find((u) => u.username === username);
 		if (!user) return res.status(400).json({ msg: "Invalid Credentials" });
 
 		// Check password
-		const isMatch = await bcrypt.compare(password, user.password);
+		const isMatch = password === user.password;
 		if (!isMatch) return res.status(400).json({ msg: "Invalid Credentials" });
 
+		res.json({
+			data: {
+				msg: "success",
+				role: user.role,
+				twofactor: { enabled: user["2fa_enabled"], method: user["2fa_method"] },
+			},
+		});
+
 		// Generate 2FA code
-		const twoFactorCode = Math.floor(100000 + Math.random() * 900000).toString();
-		user.twoFactorCode = twoFactorCode;
-		user.twoFactorExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
-		await user.save();
+		// const twoFactorCode = Math.floor(100000 + Math.random() * 900000).toString();
+		// user.twoFactorCode = twoFactorCode;
+		// user.twoFactorExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
+		// await user.save();
 
 		// Send 2FA code via email
-		const sendEmail = require("../utils/sendEmail");
-		await sendEmail(user.email, "Your 2FA Code", `Your verification code is ${twoFactorCode}`);
+		// const sendEmail = require("../utils/sendEmail");
+		// await sendEmail(user.email, "Your 2FA Code", `Your verification code is ${twoFactorCode}`);
 
-		res.json({ msg: "2FA code sent to your email" });
+		// res.json({ msg: "2FA code sent to your email" });
 	} catch (err) {
 		console.error(err.message);
 		res.status(500).send("Server error");

@@ -1,29 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { useUser } from "./hooks/user";
 
 import Dashboard from "./components/Dashboard";
 import EmployeeView from "./components/EmployeeView";
 import Login from "./pages/Login";
 
-const router = createBrowserRouter([
+const public_Router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Login />,
-		children: [
-			{
-				path: "dashboard",
-				element: <Dashboard />,
-			},
-			{
-				path: "employee",
-				element: <EmployeeView />,
-			},
-		],
+	},
+]);
+
+const hrManager_Router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Dashboard />,
+	},
+]);
+
+const employee_Router = createBrowserRouter([
+	{
+		path: "/",
+		element: <EmployeeView />,
 	},
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+	const { role, login } = useUser();
+
+	const [loading, setLoading] = useState(true);
+
+	// Persist states on page refresh
+	useEffect(() => {
+		const username = localStorage.getItem("username");
+		const role = localStorage.getItem("role");
+
+		if (username && role) login(username, role);
+
+		setLoading(false);
+	}, []);
+
+	return loading ? (
+		"Loading..."
+	) : (
+		<RouterProvider
+			router={
+				role ? (role === "Employee" ? employee_Router : hrManager_Router) : public_Router
+			}
+		/>
+	);
 }
 
 export default App;

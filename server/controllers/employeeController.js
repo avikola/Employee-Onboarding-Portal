@@ -1,5 +1,7 @@
 const { validationResult } = require("express-validator");
+
 let employees = require("../../data/employees.json");
+
 const Employee = require("../models/employeeModel.js");
 
 const getAllEmployees = (req, res) => {
@@ -29,7 +31,7 @@ const addEmployee = (req, res) => {
 		return res.status(400).json({ errors: errors.array() });
 	}
 
-	const newEmployee = { id: id_temp++, ...req.body };
+	const newEmployee = { ...req.body, id: id_temp++ };
 
 	employees.push(newEmployee);
 
