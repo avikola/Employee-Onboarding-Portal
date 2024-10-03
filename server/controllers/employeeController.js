@@ -24,6 +24,7 @@ const getEmployee = async (req, res) => {
 	}
 };
 
+// Add Employee
 let id_temp = 11; // ID counter (simple alternative to automated uuid)
 const addEmployee = (req, res) => {
 	const errors = validationResult(req);

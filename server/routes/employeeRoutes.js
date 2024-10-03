@@ -36,7 +36,19 @@ router.post(
 );
 
 // Update Employee - PUT /api/employees/:id
-router.put("/:id", updateEmployee);
+router.put(
+	"/:id",
+	[
+		check("name", "Name is required").notEmpty(),
+		check("role", "Role is required").notEmpty(),
+		check("department", "Department is required").notEmpty(),
+		check("onboardingStatus")
+			.default("Pending")
+			.optional()
+			.isIn(["Pending", "In Progress", "Completed"]),
+	],
+	updateEmployee
+);
 
 // Get Single Employee - DELETE /api/employees/:id
 router.delete("/:id", deleteEmployee);
