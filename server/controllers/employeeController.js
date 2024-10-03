@@ -41,6 +41,11 @@ const addEmployee = (req, res) => {
 
 // Update Employee
 const updateEmployee = async (req, res) => {
+	const errors = validationResult(req);
+	if (!errors.isEmpty()) {
+		return res.status(400).json({ errors: errors.array() });
+	}
+
 	const params_ID = Number(req.params.id);
 	const { name, department, role, onboardingStatus } = req.body;
 

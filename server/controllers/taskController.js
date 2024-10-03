@@ -45,6 +45,11 @@ const addTask = (req, res) => {
 
 // Update Task
 const updateTask = async (req, res) => {
+	const errors = validationResult(req);
+	if (!errors.isEmpty()) {
+		return res.status(400).json({ errors: errors.array() });
+	}
+
 	const params_ID = Number(req.params.task_id);
 	const { task_name, task_description, status, assignee } = req.body;
 

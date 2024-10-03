@@ -139,7 +139,7 @@ const EmployeeInfo = ({
 					</div>
 				)}
 
-				{error && <span style={{ color: "darkred" }}>{error.msg}</span>}
+				{error && <span className="error">{error.msg}</span>}
 			</div>
 		</div>
 	);

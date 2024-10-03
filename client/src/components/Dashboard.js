@@ -35,7 +35,7 @@ const Dashboard = () => {
 
 	return (
 		<div className="hr-section">
-			<div className="title">
+			<div className="title main">
 				<h2>HR Dashboard</h2>
 				<button onClick={() => logout()} className="logout">
 					Logout
@@ -64,7 +64,9 @@ const Dashboard = () => {
 								role="button"
 								onClick={() => {
 									setAddNewEmployee(false);
-									setSelectedEmployee(employee);
+									if (selectedEmployee?.name === employee.name)
+										setSelectedEmployee();
+									else setSelectedEmployee(employee);
 								}}
 							>
 								{employee.name}

@@ -8,7 +8,12 @@
 .title {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-bottom: 12px;
+
+	&.main {
+		padding: 0 25px;
+	}
 }
 
 h2 {
@@ -18,7 +23,7 @@ h2 {
 .management-block {
 	background-color: #f7f8fa;
 
-	border: 1px solid #5a6169;
+	border: 1px solid #5a616966;
 	border-radius: 5px;
 	padding: 24px;
 }
@@ -44,7 +49,7 @@ h2 {
 	width: 100%;
 
 	background-color: #f1f1f1;
-	border: 1px solid #5a6169;
+	border: 1px solid #5a616966;
 
 	padding: 12px 12px;
 
@@ -59,6 +64,7 @@ h2 {
 	width: auto;
 	border-radius: 5px;
 	cursor: pointer;
+	user-select: none;
 
 	&:hover {
 		font-weight: 600;
@@ -67,7 +73,7 @@ h2 {
 
 .employee-edit {
 	background-color: #ddf1ff;
-	border: 1px solid #104d87;
+	border: 1px solid #104d8744;
 	border-radius: 5px;
 
 	padding: 24px;
@@ -96,17 +102,6 @@ h2 {
 			row-gap: 6px;
 			font-size: 12px;
 			width: 100%;
-		}
-
-		.buttons {
-			display: flex;
-			justify-content: flex-end;
-			width: 100%;
-			column-gap: 6px;
-
-			button {
-				min-width: 100px;
-			}
 		}
 	}
 }

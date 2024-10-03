@@ -139,7 +139,12 @@ export const AddNewTask = ({ employees, setAddNewTask }) => {
 				</select>
 			</label>
 
-			<button onClick={() => addTaskFunction()}>Create Task</button>
+			<div className="buttons">
+				<button className="red" onClick={() => setAddNewTask(false)}>
+					Cancel
+				</button>
+				<button onClick={() => addTaskFunction()}>Create Task</button>
+			</div>
 		</div>
 	);
 };
