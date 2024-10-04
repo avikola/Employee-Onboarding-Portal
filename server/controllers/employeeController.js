@@ -24,14 +24,14 @@ const getEmployee = async (req, res) => {
 	}
 };
 
-// Add Employee
-let id_temp = 11; // ID counter (simple alternative to automated uuid)
+// Add Employee // ID counter (simple alternative to automated uuid)
 const addEmployee = (req, res) => {
 	const errors = validationResult(req);
 	if (!errors.isEmpty()) {
 		return res.status(400).json({ errors: errors.array() });
 	}
 
+	let id_temp = employees.length + 1;
 	const newEmployee = { ...req.body, id: id_temp++ };
 
 	employees.push(newEmployee);

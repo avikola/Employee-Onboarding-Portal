@@ -28,7 +28,7 @@
 }
 
 .tasks-section {
-	padding: 12px 12px;
+	padding: 12px 24px;
 	padding-top: 24px;
 
 	border-radius: 5px;
@@ -42,8 +42,12 @@
 
 .completed-green {
 	color: green;
+	font-size: 15px;
+	font-weight: 600;
 }
 
 .completed-red {
 	color: red;
+	font-size: 15px;
+	font-weight: 600;
 }

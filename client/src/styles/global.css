@@ -20,6 +20,7 @@ h3 {
 button {
 	appearance: none;
 	background-color: #2ea44f;
+
 	&.logout,
 	&.red {
 		background-color: #a42e2e;
@@ -29,6 +30,11 @@ button {
 	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
 	box-sizing: border-box;
 	color: #fff;
+
+	&.simple {
+		background-color: unset;
+		color: unset;
+	}
 	cursor: pointer;
 	display: inline-block;
 	font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
@@ -57,6 +63,10 @@ button:hover {
 	&.logout,
 	&.red {
 		background-color: #631515;
+	}
+
+	&.simple {
+		color: white;
 	}
 }
 

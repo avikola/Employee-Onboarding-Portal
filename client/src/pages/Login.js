@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/login.css";
 
@@ -7,6 +8,8 @@ import { useUser } from "../hooks/user";
 import { loginAPI } from "../apis/auth";
 
 const Login = () => {
+	const navigate = useNavigate();
+
 	const { login } = useUser();
 
 	const [username, setUsername] = useState("");
@@ -60,6 +63,10 @@ const Login = () => {
 				</label>
 
 				<button type="submit">Login</button>
+
+				<button className="simple" onClick={() => navigate("register")}>
+					Register
+				</button>
 			</form>
 		</div>
 	);

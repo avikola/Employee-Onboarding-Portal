@@ -35,7 +35,7 @@ const EmployeeInfo = ({
 		},
 		onError: (error) => {
 			console.error("Error while creating Employee:", error);
-			const errormsg = error?.response?.data?.errors?.[0] || "Error";
+			const errormsg = error?.response?.data?.errors?.[0] || { msg: "Error" };
 			setError(errormsg);
 		},
 	});
@@ -51,7 +51,7 @@ const EmployeeInfo = ({
 		},
 		onError: (error) => {
 			console.error("Error while updating Employee:", error);
-			const errormsg = error?.response?.data?.errors?.[0] || "Error";
+			const errormsg = error?.response?.data?.errors?.[0] || { msg: "Error" };
 			setError(errormsg);
 		},
 	});

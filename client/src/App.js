@@ -6,11 +6,16 @@ import { useUser } from "./hooks/user";
 import Dashboard from "./components/HR/Dashboard";
 import EmployeeView from "./components/Employee/EmployeeView";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const public_Router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Login />,
+	},
+	{
+		path: "register",
+		element: <Register />,
 	},
 ]);
 

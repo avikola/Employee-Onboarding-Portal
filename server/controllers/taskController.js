@@ -6,11 +6,8 @@ const getAllTasks = (req, res) => {
 	let response_tasks = tasks;
 
 	// If Employee Specfic
-	console.log("HERE1", req.query.id);
 	if (req?.query?.id) {
 		response_tasks = tasks.filter((tk) => tk.assignee === req.query.id.toString());
-
-		console.log("HERE2", response_tasks);
 	}
 
 	res.json(response_tasks);

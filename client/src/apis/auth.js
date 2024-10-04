@@ -10,12 +10,12 @@ const loginAPI = async (bodyData) => {
 	return data;
 };
 
-const registerAPI = async (bodyData) => {
-	const url = `${apiUrl}/login`;
+const registerAPI = async ({ bodyData }) => {
+	const url = `${apiUrl}/register`;
 
 	const { data } = await axios.post(url.toString(), bodyData);
 
 	return data;
 };
 
-export { loginAPI };
+export { loginAPI, registerAPI };

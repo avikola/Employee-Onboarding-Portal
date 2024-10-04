@@ -10,10 +10,16 @@ const router = express.Router();
 router.post(
 	"/register",
 	[
+		check("username", "Username is required").notEmpty(),
 		check("name", "Name is required").notEmpty(),
-		check("email", "Please include a valid email").isEmail(),
 		check("password", "Password must be 6 or more characters").isLength({ min: 6 }),
-		check("role", "Role must be either HR or Employee").isIn(["HR Manager", "Employee"]),
+		check("email", "Please include a valid email").isEmail(),
+		check("role", 'Role must be either "HR Manager" or "Employee"').isIn([
+			"HR Manager",
+			"Employee",
+		]),
+		check("department", "Department is required").notEmpty(),
+		check("dept_role", "Department Role is required").notEmpty(),
 	],
 	register
 );
