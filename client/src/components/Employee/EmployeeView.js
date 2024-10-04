@@ -1,5 +1,5 @@
 import React from "react";
-import { useUser } from "../hooks/user";
+import { useUser } from "../../hooks/user";
 
 const EmployeeView = () => {
 	const { logout } = useUser();
@@ -10,8 +10,6 @@ const EmployeeView = () => {
 				<h2>Employee Onboarding Status</h2>
 				<button onClick={() => logout()}>Logout</button>
 			</div>
-
-			{/* Display employee's tasks here */}
 		</div>
 	);
 };

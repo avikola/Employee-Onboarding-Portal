@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { useUser } from "./hooks/user";
 
-import Dashboard from "./components/Dashboard";
-import EmployeeView from "./components/EmployeeView";
+import Dashboard from "./components/HR/Dashboard";
+import EmployeeView from "./components/Employee/EmployeeView";
 import Login from "./pages/Login";
 
 const public_Router = createBrowserRouter([

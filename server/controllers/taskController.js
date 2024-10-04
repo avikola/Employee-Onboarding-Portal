@@ -1,6 +1,6 @@
 const { validationResult } = require("express-validator");
 
-let tasks = require("../../data/tasks.json");
+let tasks = require("../data/tasks.json");
 
 const getAllTasks = (req, res) => {
 	res.json(tasks);

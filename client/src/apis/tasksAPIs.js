@@ -2,14 +2,14 @@ import axios from "axios";
 
 const apiUrl = "http://localhost:5000/api/tasks";
 
+// GET - Get all Tasks
 const getAllTasksAPI = async () => {
-	const url = `${apiUrl}`;
-
-	const { data } = await axios.get(url.toString());
+	const { data } = await axios.get(apiUrl.toString());
 
 	return data;
 };
 
+// GET - Get single Task
 const getTasksAPI = async (taskId) => {
 	const url = `${apiUrl}/${taskId}`;
 
@@ -18,6 +18,7 @@ const getTasksAPI = async (taskId) => {
 	return data;
 };
 
+// PUT - Update Task
 const updateTasksAPI = async ({ taskId, body }) => {
 	const url = `${apiUrl}/${taskId}`;
 
@@ -26,14 +27,14 @@ const updateTasksAPI = async ({ taskId, body }) => {
 	return data;
 };
 
+// POST - Add New Task
 const addTasksAPI = async ({ body }) => {
-	const url = `${apiUrl}`;
-
-	const { data } = await axios.post(url.toString(), body);
+	const { data } = await axios.post(apiUrl.toString(), body);
 
 	return data;
 };
 
+// DELETE - Delete Task
 const deleteTasksAPI = async ({ taskId }) => {
 	const url = `${apiUrl}/${taskId}`;
 

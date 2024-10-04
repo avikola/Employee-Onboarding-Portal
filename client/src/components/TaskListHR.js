@@ -85,9 +85,7 @@ export const AddNewTask = ({ employees, setAddNewTask }) => {
 		},
 	});
 
-	const addTaskFunction = () => {
-		addTaskMutate({ body: newTaskInfo });
-	};
+	const addTaskFunction = () => addTaskMutate({ body: newTaskInfo });
 
 	return (
 		<div className="task new">

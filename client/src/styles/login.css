@@ -5,15 +5,27 @@
 	align-items: center;
 	justify-content: center;
 
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 	height: 100%;
+
+	h1 {
+		font-size: 24px;
+		margin-bottom: 48px;
+	}
 
 	.login-form {
 		display: flex;
 		flex-direction: column;
 
-		row-gap: 24px;
+		max-width: 400px;
+		width: 100%;
+		padding: 48px 36px;
+
+		background-color: hsl(255, 0%, 99%);
+
+		border: 1px solid #5a616966;
+		border-radius: 5px;
+
+		row-gap: 36px;
 
 		label {
 			display: flex;

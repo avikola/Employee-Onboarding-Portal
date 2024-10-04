@@ -28,7 +28,7 @@ h2 {
 	padding: 24px;
 }
 
-.employee-section {
+.section {
 	display: flex;
 	flex-direction: column;
 	column-gap: 12px;

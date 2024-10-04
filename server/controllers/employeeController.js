@@ -1,6 +1,6 @@
 const { validationResult } = require("express-validator");
 
-let employees = require("../../data/employees.json");
+let employees = require("../data/employees.json");
 
 const Employee = require("../models/employeeModel.js");
 
