@@ -37,8 +37,9 @@ function App() {
 	useEffect(() => {
 		const username = localStorage.getItem("username");
 		const role = localStorage.getItem("role");
+		const id = localStorage.getItem("id");
 
-		if (username && role) login(username, role);
+		if (username && role && id) login(username, role, id);
 
 		setLoading(false);
 	}, []);

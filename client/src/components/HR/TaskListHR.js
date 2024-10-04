@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../styles/tasks.css";
+import "../../styles/tasks.css";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { addTasksAPI, updateTasksAPI } from "../apis/tasksAPIs";
+import { addTasksAPI, updateTasksAPI } from "../../apis/tasksAPIs";
 
 const TaskListHR = ({ data, employees }) => {
 	// Access the client

@@ -3,7 +3,17 @@ const { validationResult } = require("express-validator");
 let tasks = require("../data/tasks.json");
 
 const getAllTasks = (req, res) => {
-	res.json(tasks);
+	let response_tasks = tasks;
+
+	// If Employee Specfic
+	console.log("HERE1", req.query.id);
+	if (req?.query?.id) {
+		response_tasks = tasks.filter((tk) => tk.assignee === req.query.id.toString());
+
+		console.log("HERE2", response_tasks);
+	}
+
+	res.json(response_tasks);
 };
 
 const getTask = async (req, res) => {

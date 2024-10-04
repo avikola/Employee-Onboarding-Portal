@@ -5,10 +5,12 @@ export const UserContext = React.createContext(null);
 export const UserProvider = ({ children }) => {
 	const [user, setUser] = React.useState(undefined);
 
-	const login = (username, role) => {
+	const login = (username, role, id) => {
 		localStorage.setItem("username", username);
 		localStorage.setItem("role", role);
-		setUser({ username, role });
+		localStorage.setItem("id", id);
+
+		setUser({ username, role, id });
 	};
 
 	const logout = () => {

@@ -30,7 +30,7 @@ router.put(
 		check("task_name", "Task name is required").notEmpty(),
 		check("task_description").optional(),
 		check("status").optional().default("Pending").isIn(["Pending", "In Progress", "Completed"]),
-		check("assignee").optional().isNumeric(),
+		check("assignee").optional(),
 	],
 	updateTask
 );

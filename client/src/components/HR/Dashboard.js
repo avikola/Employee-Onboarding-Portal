@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useUser } from "../../hooks/user";
 
 import EmployeeInfo from "../EmployeeInfo";
-import TaskListHR, { AddNewTask } from "../TaskListHR";
+import TaskListHR, { AddNewTask } from "./TaskListHR";
 
 import { getAllEmployeesAPI } from "../../apis/employeesAPIS";
 import { getAllTasksAPI } from "../../apis/tasksAPIs";

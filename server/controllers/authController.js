@@ -68,6 +68,7 @@ exports.login = async (req, res) => {
 			data: {
 				msg: "success",
 				role: user.role,
+				id: user.id,
 				twofactor: { enabled: user["2fa_enabled"], method: user["2fa_method"] },
 			},
 		});

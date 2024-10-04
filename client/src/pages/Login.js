@@ -25,7 +25,7 @@ const Login = () => {
 
 			// Set Global State for RBAC control
 			if (data?.msg === "success") {
-				login(username, data.role);
+				login(username, data.role, data.id);
 			}
 		} catch (e) {
 			console.error(e);

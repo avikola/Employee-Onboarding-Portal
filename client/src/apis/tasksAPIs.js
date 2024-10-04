@@ -9,6 +9,15 @@ const getAllTasksAPI = async () => {
 	return data;
 };
 
+// GET - Get Employee Specific Tasks
+const getEmployeeSpecificTasksAPI = async (employee_id) => {
+	const url = `${apiUrl}?id=${employee_id}`;
+
+	const { data } = await axios.get(url.toString());
+
+	return data;
+};
+
 // GET - Get single Task
 const getTasksAPI = async (taskId) => {
 	const url = `${apiUrl}/${taskId}`;
@@ -43,4 +52,11 @@ const deleteTasksAPI = async ({ taskId }) => {
 	return data;
 };
 
-export { getAllTasksAPI, getTasksAPI, updateTasksAPI, addTasksAPI, deleteTasksAPI };
+export {
+	getAllTasksAPI,
+	getEmployeeSpecificTasksAPI,
+	getTasksAPI,
+	updateTasksAPI,
+	addTasksAPI,
+	deleteTasksAPI,
+};
