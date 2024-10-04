@@ -16,7 +16,14 @@ const EmployeeInfo = ({
 	const [error, setError] = useState();
 
 	const [updatedInfo, setUpdatedInfo] = useState(
-		selectedEmployee || { id: "", name: "", role: "", department: "", onboardingStatus: "" }
+		selectedEmployee || {
+			id: "",
+			name: "",
+			email: "",
+			role: "",
+			department: "",
+			onboardingStatus: "",
+		}
 	);
 
 	// Add Employee
@@ -70,6 +77,7 @@ const EmployeeInfo = ({
 	// Updates for every employee
 	useEffect(() => {
 		if (selectedEmployee) setUpdatedInfo(selectedEmployee);
+		console.log({ selectedEmployee });
 	}, [selectedEmployee]);
 
 	return (
@@ -84,6 +92,16 @@ const EmployeeInfo = ({
 						type="text"
 						value={updatedInfo.name}
 						onChange={(e) => setUpdatedInfo({ ...updatedInfo, name: e.target.value })}
+					/>
+				</label>
+
+				<label>
+					Email*
+					<input
+						name="email"
+						type="email"
+						value={updatedInfo.email}
+						onChange={(e) => setUpdatedInfo({ ...updatedInfo, email: e.target.value })}
 					/>
 				</label>
 
@@ -109,13 +127,17 @@ const EmployeeInfo = ({
 
 				<label>
 					On-boarding Status
-					<input
+					<select
 						name="onboardingStatus"
-						value={updatedInfo.onboardingStatus}
+						value={updatedInfo.onboardingStatus || "Pending"}
 						onChange={(e) =>
 							setUpdatedInfo({ ...updatedInfo, onboardingStatus: e.target.value })
 						}
-					/>
+					>
+						<option value="Pending">Pending</option>
+						<option value="In Progress">In Progress</option>
+						<option value="Completed">Completed</option>
+					</select>
 				</label>
 
 				{newEmployee ? (

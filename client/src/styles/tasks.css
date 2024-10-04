@@ -24,7 +24,8 @@
 	width: 100%;
 
 	border-radius: 5px;
-	background-color: #c0c1c4;
+	border: 1px solid #5a616922;
+	background-color: #c0c1c455;
 
 	row-gap: 16px;
 	column-gap: 16px;
@@ -38,7 +39,7 @@
 	border-radius: 6px;
 	row-gap: 24px;
 
-	background-color: #edeef0;
+	background-color: hsl(220, 9%, 97%);
 
 	label {
 		display: flex;

@@ -26,6 +26,7 @@ router.post(
 	[
 		check("name", "Name is required").notEmpty(),
 		check("role", "Role is required").notEmpty(),
+		check("email", "Email is required").notEmpty().isEmail(),
 		check("department", "Department is required").notEmpty(),
 		check("onboardingStatus")
 			.default("Pending")
@@ -41,6 +42,7 @@ router.put(
 	[
 		check("name", "Name is required").notEmpty(),
 		check("role", "Role is required").notEmpty(),
+		check("email", "Email is required").notEmpty().isEmail(),
 		check("department", "Department is required").notEmpty(),
 		check("onboardingStatus")
 			.default("Pending")

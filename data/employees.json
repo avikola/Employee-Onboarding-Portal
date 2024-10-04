@@ -2,6 +2,7 @@
 	{
 		"id": 1,
 		"name": "Alice Johnson",
+		"email": "alice@gmail.com",
 		"role": "Software Engineer",
 		"department": "Engineering",
 		"onboardingStatus": "In Progress"
@@ -10,6 +11,7 @@
 		"id": 2,
 		"name": "Bob Smith",
 		"role": "HR Manager",
+		"email": "Bob@gmail.com",
 		"department": "Human Resources",
 		"onboardingStatus": "Completed"
 	},
@@ -17,12 +19,14 @@
 		"id": 3,
 		"name": "Clara Adams",
 		"role": "Accountant",
+		"email": "Clara@gmail.com",
 		"department": "Finance",
 		"onboardingStatus": "Pending"
 	},
 	{
 		"id": 4,
 		"name": "Daniel Garcia",
+		"email": "Daniel@gmail.com",
 		"role": "Product Manager",
 		"department": "Product",
 		"onboardingStatus": "Completed"
@@ -30,6 +34,7 @@
 	{
 		"id": 5,
 		"name": "Eva Thompson",
+		"email": "Eva@gmail.com",
 		"role": "Marketing Specialist",
 		"department": "Marketing",
 		"onboardingStatus": "In Progress"
@@ -37,6 +42,7 @@
 	{
 		"id": 6,
 		"name": "Franklin Lee",
+		"email": "alice@gmail.com",
 		"role": "Data Analyst",
 		"department": "Data Science",
 		"onboardingStatus": "Pending"
@@ -44,6 +50,7 @@
 	{
 		"id": 7,
 		"name": "Grace Davis",
+		"email": "Grace@gmail.com",
 		"role": "DevOps Engineer",
 		"department": "Engineering",
 		"onboardingStatus": "Completed"
@@ -51,6 +58,7 @@
 	{
 		"id": 8,
 		"name": "Henry Martinez",
+		"email": "Henry@gmail.com",
 		"role": "Legal Advisor",
 		"department": "Legal",
 		"onboardingStatus": "In Progress"
@@ -58,6 +66,7 @@
 	{
 		"id": 9,
 		"name": "Isabella King",
+		"email": "Isabella@gmail.com",
 		"role": "UX/UI Designer",
 		"department": "Design",
 		"onboardingStatus": "Completed"
@@ -65,6 +74,7 @@
 	{
 		"id": 10,
 		"name": "James Wilson",
+		"email": "James@gmail.com",
 		"role": "Business Analyst",
 		"department": "Business Intelligence",
 		"onboardingStatus": "Pending"

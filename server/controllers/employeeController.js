@@ -47,11 +47,12 @@ const updateEmployee = async (req, res) => {
 	}
 
 	const params_ID = Number(req.params.id);
-	const { name, department, role, onboardingStatus } = req.body;
+	const { name, email, department, role, onboardingStatus } = req.body;
 
 	const employeeFields = {};
 	if (params_ID) employeeFields.id = params_ID;
 	if (name) employeeFields.name = name;
+	if (email) employeeFields.email = email;
 	if (department) employeeFields.department = department;
 	if (role) employeeFields.role = role;
 	if (onboardingStatus) employeeFields.onboardingStatus = onboardingStatus;
