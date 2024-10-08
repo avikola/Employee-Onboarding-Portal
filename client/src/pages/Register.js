@@ -23,7 +23,9 @@ const Register = () => {
 	// Register
 	const { mutate: registerMutate } = useMutation({
 		mutationFn: registerAPI,
-		onSuccess: () => {},
+		onSuccess: () => {
+			navigate("/");
+		},
 		onError: (error) => {
 			console.error("Error while Registering:", error);
 			const errormsg = error?.response?.data?.errors?.[0] ||
