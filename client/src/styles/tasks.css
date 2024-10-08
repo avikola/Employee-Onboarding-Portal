@@ -42,7 +42,7 @@
 	background-color: hsl(220, 9%, 97%);
 
 	label {
-		display: flex;
+		display: flex !important;
 		flex-direction: column;
 		row-gap: 6px;
 
