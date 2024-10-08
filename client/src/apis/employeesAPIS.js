@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiUrl = "http://localhost:5000/api/employees";
+const endpoint = process.env.API_URL || process.env.REACT_APP_API_URL;
+const apiUrl = `${endpoint}/api/employees`;
 
 // GET - Get all Employees
 const getAllEmployeesAPI = async () => {
