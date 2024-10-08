@@ -13,7 +13,7 @@ const Register = () => {
 		password: "",
 		name: "",
 		email: "",
-		role: "",
+		role: "Employee",
 		department: "",
 		dept_role: "",
 	});
