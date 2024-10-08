@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const endpoint = process.env.API_URL || process.env.REACT_APP_API_URL;
+const endpoint = process.env.REACT_APP_API_URL;
 const apiUrl = `${endpoint}/api/tasks`;
 
 // GET - Get all Tasks

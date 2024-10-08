@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const endpoint = process.env.API_URL || process.env.REACT_APP_API_URL;
-console.log(endpoint);
+const endpoint = process.env.REACT_APP_API_URL;
 const apiUrl = `${endpoint}/api/auth`;
 
 const loginAPI = async (bodyData) => {
