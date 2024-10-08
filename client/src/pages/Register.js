@@ -13,7 +13,7 @@ const Register = () => {
 		password: "",
 		name: "",
 		email: "",
-		role: "Employee",
+		role: "",
 		department: "",
 		dept_role: "",
 	});
@@ -96,10 +96,11 @@ const Register = () => {
 					Role*
 					<select
 						name="role"
-						value={bodyInfo.role || "Employee"}
+						value={bodyInfo.role}
 						onChange={(e) => setBodyInfo({ ...bodyInfo, role: e.target.value })}
 						required
 					>
+						<option value=""></option>
 						<option value="Employee">Employee</option>
 						<option value="HR Manager">HR Manager</option>
 					</select>
